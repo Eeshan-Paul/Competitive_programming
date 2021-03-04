@@ -2,14 +2,14 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int precedence(char a){
+int precedence(char a){  // to check precedence of operator
 	if (a=='^')
 		return 3;
 	else if (a=='*' || a=='/')
 		return 2;
 	return 1;
 }
-bool isoperator(char a){
+bool isoperator(char a){  // for identifying whether the character is a operator or not
 	return (a=='^' || a=='*' || a=='/' || a=='+' || a=='-');
 }
 void infix_to_postfix(string s){
@@ -51,7 +51,7 @@ void infix_to_postfix(string s){
 }
 int main()
 {
-	string s="(a+((b*c)/d)+e)";
-	infix_to_postfix(s);
+	string s="(a+((b*c)/d)+e)";//sample case
+	infix_to_postfix(s);// we can also return the value instead of void
 	return 0;
 }
